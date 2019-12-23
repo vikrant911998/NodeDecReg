@@ -1,0 +1,210 @@
+arr = [23,14,51,62,34];
+(5) [23, 14, 51, 62, 34]
+arr.reverse();
+(5) [34, 62, 51, 14, 23]
+arr.sort();
+(5) [14, 23, 34, 51, 62]
+arr.sort((a,b)=>a-b);
+(5) [14, 23, 34, 51, 62]
+arr.sort((a,b)=>a+b);
+(5) [14, 23, 34, 51, 62]
+arr.sort((a,b)=>b-a);
+(5) [62, 51, 34, 23, 14]
+//Spread Operator
+arr
+(5) [62, 51, 34, 23, 14]
+a = [...arr,100,200,300,400];
+(9) [62, 51, 34, 23, 14, 100, 200, 300, 400]
+a
+(9) [62, 51, 34, 23, 14, 100, 200, 300, 400]
+a = [100,200,300,...arr];
+(8) [100, 200, 300, 62, 51, 34, 23, 14]
+a = [100,200,...arr,300,400];
+(9) [100, 200, 62, 51, 34, 23, 14, 300, 400]
+var obj = {
+	name:'Vikrant',
+	age:23
+};
+undefined
+demo = {id:101,...obj};
+{id: 101, name: "Vikrant", age: 23}
+demo
+{id: 101, name: "Vikrant", age: 23}
+demo = {...obj,id:101};
+{name: "Vikrant", age: 23, id: 101}
+//Rest Parameter
+undefined
+function add(a,b){
+	return a+b;
+}
+undefined
+add();
+NaN
+add(1,2);
+3
+function add(a,b,...n){
+	return a+b;
+}
+undefined
+function add(a,b,...n){
+	console.log(n);
+	return a+b;
+}
+undefined
+add(1,2);
+VM1711:2 []
+3
+add(1,2,34,5,6,71,81,29);
+VM1711:2 (6) [34, 5, 6, 71, 81, 29]
+3
+function add(a,b,...n){
+	console.log(typeof n);
+	return a+b;
+}
+undefined
+add(1,2,34);
+VM1841:2 object
+3
+function add(a,b,...n){
+	console.log(n instanceof Array);
+	return a+b;
+}
+undefined
+add();
+VM1959:2 true
+NaN
+this
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+console.log(this);
+VM2163:1 Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+undefined
+function checkThis(){
+	console.log(this);
+}
+undefined
+checkThis();
+VM2286:2 Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+undefined
+checkThis = function(){
+	console.log(this);
+}
+ƒ (){
+	console.log(this);
+}
+checkThis();
+VM2452:2 Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+undefined
+name = 'Vikrant';
+"Vikrant"
+window.name;
+"Vikrant"
+var obj = {
+	name:'Vikas',
+	printThis:function (){
+		console.log(this);
+	}
+}
+undefined
+obj
+{name: "Vikas", printThis: ƒ}
+obj.name;
+"Vikas"
+obj.printThis();
+VM2785:4 {name: "Vikas", printThis: ƒ}
+undefined
+var obj = {
+	name:'Vikas',
+	printThis:()=>{
+		console.log(this);
+	}
+}
+undefined
+obj.printThis();
+VM2953:4 Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+undefined
+var obj = {
+	name:'Vikas',
+	printThis(){
+		console.log(this);
+	}
+}
+undefined
+obj.printThis();
+VM3093:4 {name: "Vikas", printThis: ƒ}
+undefined
+var obj = {
+	name:'Vikas',
+	printThis(){
+		console.log(this.name);
+	}
+}
+undefined
+obj.printThis();
+VM3192:4 Vikas
+undefined
+var obj = {
+	name:'Vikas',
+	printThis:()=>{
+		console.log(this.name);
+	}
+}
+undefined
+obj.printThis();
+VM3281:4 Vikrant
+undefined
+checkThis();
+VM2452:2 Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+undefined
+console.dir(checkThis);
+VM3605:1 ƒ checkThis()arguments: nullcaller: nulllength: 0name: "checkThis"prototype: {constructor: ƒ}constructor: ƒ ()__proto__: Object__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM2452:1[[Scopes]]: Scopes[1]
+undefined
+function checkThis(){
+	console.log(this.name);
+}
+undefined
+checkThis();
+VM3737:2 Vikrant
+undefined
+checkThis.apply(obj);
+VM3737:2 Vikas
+undefined
+checkThis();
+VM3737:2 Vikrant
+undefined
+checkThis.call(obj);
+VM3737:2 Vikas
+undefined
+checkThis();
+VM3737:2 Vikrant
+undefined
+checkThis.bind(obj);
+ƒ checkThis(){
+	console.log(this.name);
+}
+temp = checkThis.bind(obj);
+ƒ checkThis(){
+	console.log(this.name);
+}
+checkThis();
+VM3737:2 Vikrant
+undefined
+temp();
+VM3737:2 Vikas
+undefined
+obj
+{name: "Vikas", printThis: ƒ}name: "Vikas"printThis: ()=>{ 		console.log(this.name); 	}__proto__: Object
+obj.printThis();
+VM3281:4 Vikrant
+undefined
+obj.printThis.apply(obj);
+VM3281:4 Vikrant
+undefined
+temp1 = obj.printThis.bind(obj);
+()=>{
+		console.log(this.name);
+	}
+temp1();
+VM3281:4 Vikrant
+undefined
+obj
+{name: "Vikas", printThis: ƒ}name: "Vikas"printThis: ()=>{ 		console.log(this.name); 	}arguments: (...)caller: (...)length: 0name: "printThis"__proto__: ƒ ()[[FunctionLocation]]: VM3281:3[[Scopes]]: Scopes[1]__proto__: Object
