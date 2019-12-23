@@ -1,0 +1,571 @@
+function Calc(){
+	function add(a,b){
+		return a+b;
+	}
+	function sub(a,b){
+		return a-b;
+	}
+}
+undefined
+function Calc(){
+	console.log('definition started');
+	function add(a,b){
+		return a+b;
+	}
+	function sub(a,b){
+		return a-b;
+	}
+	console.log('definition ended');
+	return [add,sub];
+}
+undefined
+Calc();
+VM781:2 definition started
+VM781:9 definition ended
+(2) [ƒ, ƒ]0: ƒ add(a,b)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM781:3[[Scopes]]: Scopes[1]1: ƒ sub(a,b)length: 2__proto__: Array(0)
+var temp = Calc();
+VM781:2 definition started
+VM781:9 definition ended
+undefined
+temp instanceof Array;
+true
+temp
+(2) [ƒ, ƒ]0: ƒ add(a,b)1: ƒ sub(a,b)length: 2__proto__: Array(0)
+temp[0];
+ƒ add(a,b){
+		return a+b;
+	}
+temp[1];
+ƒ sub(a,b){
+		return a-b;
+	}
+temp[0](31,2);
+33
+temp[1](31,2);
+29
+function Calc(){
+	console.log('definition started');
+	function add(a,b){
+		return a+b;
+	}
+	function sub(a,b){
+		return a-b;
+	}
+	console.log('definition ended');
+	return {addition:add,subtraction:sub};
+}
+undefined
+var temp = Calc();
+VM1238:2 definition started
+VM1238:9 definition ended
+undefined
+temp
+{addition: ƒ, subtraction: ƒ}
+temp.addition(2,3);
+5
+temp.subtraction(2,3);
+-1
+function Calc(){
+	console.log('definition started');
+	function addition(a,b){
+		return a+b;
+	}
+	function subtraction(a,b){
+		return a-b;
+	}
+	console.log('definition ended');
+	return {addition,subtraction};
+}
+undefined
+var temp = Calc();
+VM1468:2 definition started
+VM1468:9 definition ended
+undefined
+temp
+{addition: ƒ, subtraction: ƒ}addition: ƒ addition(a,b)subtraction: ƒ subtraction(a,b)__proto__: Object
+typeof sub;
+"undefined"
+var
+;
+VM1783:2 Uncaught SyntaxError: Unexpected token ';'
+function scope(){
+	var demo = 1;
+	if(demo == 1){
+		var demo = 2;
+		console.log(demo);
+	}
+	console.log(demo);
+}
+scope();
+VM2393:5 2
+VM2393:7 2
+undefined
+function scope(){
+	let demo = 1;
+	if(demo == 1){
+		let demo = 2;
+		console.log(demo);
+	}
+	console.log(demo);
+}
+scope();
+VM2429:5 2
+VM2429:7 1
+undefined
+function scope(){
+	var demo = 1;
+	if(demo == 1){
+		let demo = 2;
+		console.log(demo);
+	}
+	console.log(demo);
+}
+scope();
+VM2449:5 2
+VM2449:7 1
+undefined
+function scope(){
+	let demo = 1;
+	if(demo == 1){
+		var demo = 2;
+		console.log(demo);
+	}
+	console.log(demo);
+}
+scope();
+VM2490:4 Uncaught SyntaxError: Identifier 'demo' has already been declared
+function declaration(){
+	var x = 1;
+	var x = 2;
+	console.log(x);
+	let d = 1;
+	let d = 2;
+	console.log(d);
+}
+VM2882:6 Uncaught SyntaxError: Identifier 'd' has already been declared
+window
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}Calc: ƒ Calc()alert: ƒ alert()atob: ƒ atob()blur: ƒ ()btoa: ƒ btoa()cancelAnimationFrame: ƒ cancelAnimationFrame()cancelIdleCallback: ƒ cancelIdleCallback()captureEvents: ƒ captureEvents()chrome: {embeddedSearch: {…}, loadTimes: ƒ, csi: ƒ}clearInterval: ƒ clearInterval()clearTimeout: ƒ clearTimeout()clientInformation: Navigator {vendorSub: "", productSub: "20030107", vendor: "Google Inc.", maxTouchPoints: 0, hardwareConcurrency: 4, …}close: ƒ ()closed: falseconfirm: ƒ confirm()createImageBitmap: ƒ createImageBitmap()crypto: Crypto {}customElements: CustomElementRegistry {}defaultStatus: ""defaultstatus: ""devicePixelRatio: 0.8999999761581421document: documentexternal: External {}fetch: ƒ fetch()find: ƒ find()focus: ƒ ()frameElement: nullframes: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}getComputedStyle: ƒ getComputedStyle()getSelection: ƒ getSelection()history: History {length: 2, scrollRestoration: "auto", state: null}indexedDB: IDBFactory {}innerHeight: 912innerWidth: 166isSecureContext: falselength: 0localStorage: (...)location: Location {href: "about:blank", ancestorOrigins: DOMStringList, origin: "null", protocol: "about:", replace: ƒ, …}locationbar: BarProp {visible: true}matchMedia: ƒ matchMedia()menubar: BarProp {visible: true}moveBy: ƒ moveBy()moveTo: ƒ moveTo()name: ""navigator: Navigator {vendorSub: "", productSub: "20030107", vendor: "Google Inc.", maxTouchPoints: 0, hardwareConcurrency: 4, …}onabort: nullonafterprint: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonappinstalled: nullonauxclick: nullonbeforeinstallprompt: nullonbeforeprint: nullonbeforeunload: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncuechange: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullongotpointercapture: nullonhashchange: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonlanguagechange: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmessage: nullonmessageerror: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonoffline: nullononline: nullonpagehide: nullonpageshow: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonpopstate: nullonprogress: nullonratechange: nullonrejectionhandled: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonstorage: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitionend: nullonunhandledrejection: nullonunload: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkittransitionend: nullonwheel: nullopen: ƒ open()openDatabase: ƒ ()opener: nullorigin: "null"outerHeight: 900outerWidth: 1440pageXOffset: 0pageYOffset: 0parent: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}performance: Performance {timeOrigin: 1577011436645.528, onresourcetimingbufferfull: null, memory: MemoryInfo, navigation: PerformanceNavigation, timing: PerformanceTiming}personalbar: BarProp {visible: true}postMessage: ƒ ()print: ƒ print()prompt: ƒ prompt()queueMicrotask: ƒ queueMicrotask()releaseEvents: ƒ releaseEvents()requestAnimationFrame: ƒ requestAnimationFrame()requestIdleCallback: ƒ requestIdleCallback()resizeBy: ƒ resizeBy()resizeTo: ƒ resizeTo()scope: ƒ scope()screen: Screen {availWidth: 1440, availHeight: 797, width: 1440, height: 900, colorDepth: 24, …}screenLeft: 0screenTop: 0screenX: 0screenY: 0scroll: ƒ scroll()scrollBy: ƒ scrollBy()scrollTo: ƒ scrollTo()scrollX: 0scrollY: 0scrollbars: BarProp {visible: true}self: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}sessionStorage: (...)setInterval: ƒ setInterval()setTimeout: ƒ setTimeout()speechSynthesis: SpeechSynthesis {pending: false, speaking: false, paused: false, onvoiceschanged: null}status: ""statusbar: BarProp {visible: true}stop: ƒ stop()styleMedia: StyleMedia {type: "screen"}temp: {addition: ƒ, subtraction: ƒ}toolbar: BarProp {visible: true}top: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}visualViewport: VisualViewport {offsetLeft: 0, offsetTop: 0, pageLeft: 0, pageTop: 0, width: 166.6666717529297, …}webkitCancelAnimationFrame: ƒ webkitCancelAnimationFrame()webkitRequestAnimationFrame: ƒ webkitRequestAnimationFrame()webkitRequestFileSystem: ƒ ()webkitResolveLocalFileSystemURL: ƒ ()webkitStorageInfo: DeprecatedStorageInfo {}window: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}__REACT_DEVTOOLS_APPEND_COMPONENT_STACK__: true__REACT_DEVTOOLS_COMPONENT_FILTERS__: [{…}]Infinity: InfinityAbortController: ƒ AbortController()AbortSignal: ƒ AbortSignal()AnalyserNode: ƒ AnalyserNode()Animation: ƒ Animation()AnimationEffect: ƒ AnimationEffect()AnimationEvent: ƒ AnimationEvent()Array: ƒ Array()ArrayBuffer: ƒ ArrayBuffer()Atomics: Atomics {load: ƒ, store: ƒ, add: ƒ, sub: ƒ, and: ƒ, …}Attr: ƒ Attr()Audio: ƒ Audio()AudioBuffer: ƒ AudioBuffer()AudioBufferSourceNode: ƒ AudioBufferSourceNode()AudioContext: ƒ AudioContext()AudioDestinationNode: ƒ AudioDestinationNode()AudioListener: ƒ AudioListener()AudioNode: ƒ AudioNode()AudioParam: ƒ AudioParam()AudioParamMap: ƒ AudioParamMap()AudioProcessingEvent: ƒ AudioProcessingEvent()AudioScheduledSourceNode: ƒ AudioScheduledSourceNode()AudioWorkletNode: ƒ AudioWorkletNode()BackgroundFetchManager: ƒ BackgroundFetchManager()BackgroundFetchRecord: ƒ BackgroundFetchRecord()BackgroundFetchRegistration: ƒ BackgroundFetchRegistration()BarProp: ƒ BarProp()BaseAudioContext: ƒ BaseAudioContext()BatteryManager: ƒ BatteryManager()BeforeInstallPromptEvent: ƒ BeforeInstallPromptEvent()BeforeUnloadEvent: ƒ BeforeUnloadEvent()BigInt: ƒ BigInt()BigInt64Array: ƒ BigInt64Array()BigUint64Array: ƒ BigUint64Array()BiquadFilterNode: ƒ BiquadFilterNode()Blob: ƒ Blob()BlobEvent: ƒ BlobEvent()BluetoothUUID: ƒ BluetoothUUID()Boolean: ƒ Boolean()BroadcastChannel: ƒ BroadcastChannel()ByteLengthQueuingStrategy: ƒ ByteLengthQueuingStrategy()CDATASection: ƒ CDATASection()CSS: ƒ CSS()CSSConditionRule: ƒ CSSConditionRule()CSSFontFaceRule: ƒ CSSFontFaceRule()CSSGroupingRule: ƒ CSSGroupingRule()CSSImageValue: ƒ CSSImageValue()CSSImportRule: ƒ CSSImportRule()CSSKeyframeRule: ƒ CSSKeyframeRule()CSSKeyframesRule: ƒ CSSKeyframesRule()CSSKeywordValue: ƒ CSSKeywordValue()CSSMathInvert: ƒ CSSMathInvert()CSSMathMax: ƒ CSSMathMax()CSSMathMin: ƒ CSSMathMin()CSSMathNegate: ƒ CSSMathNegate()CSSMathProduct: ƒ CSSMathProduct()CSSMathSum: ƒ CSSMathSum()CSSMathValue: ƒ CSSMathValue()CSSMatrixComponent: ƒ CSSMatrixComponent()CSSMediaRule: ƒ CSSMediaRule()CSSNamespaceRule: ƒ CSSNamespaceRule()CSSNumericArray: ƒ CSSNumericArray()CSSNumericValue: ƒ CSSNumericValue()CSSPageRule: ƒ CSSPageRule()CSSPerspective: ƒ CSSPerspective()CSSPositionValue: ƒ CSSPositionValue()CSSRotate: ƒ CSSRotate()CSSRule: ƒ CSSRule()CSSRuleList: ƒ CSSRuleList()CSSScale: ƒ CSSScale()CSSSkew: ƒ CSSSkew()CSSSkewX: ƒ CSSSkewX()CSSSkewY: ƒ CSSSkewY()CSSStyleDeclaration: ƒ CSSStyleDeclaration()CSSStyleRule: ƒ CSSStyleRule()CSSStyleSheet: ƒ CSSStyleSheet()CSSStyleValue: ƒ CSSStyleValue()CSSSupportsRule: ƒ CSSSupportsRule()CSSTransformComponent: ƒ CSSTransformComponent()CSSTransformValue: ƒ CSSTransformValue()CSSTranslate: ƒ CSSTranslate()CSSUnitValue: ƒ CSSUnitValue()CSSUnparsedValue: ƒ CSSUnparsedValue()CSSVariableReferenceValue: ƒ CSSVariableReferenceValue()CanvasCaptureMediaStreamTrack: ƒ CanvasCaptureMediaStreamTrack()CanvasGradient: ƒ CanvasGradient()CanvasPattern: ƒ CanvasPattern()CanvasRenderingContext2D: ƒ CanvasRenderingContext2D()ChannelMergerNode: ƒ ChannelMergerNode()ChannelSplitterNode: ƒ ChannelSplitterNode()CharacterData: ƒ CharacterData()ClipboardEvent: ƒ ClipboardEvent()ClipboardItem: ƒ ClipboardItem()CloseEvent: ƒ CloseEvent()Comment: ƒ Comment()CompositionEvent: ƒ CompositionEvent()ConstantSourceNode: ƒ ConstantSourceNode()ConvolverNode: ƒ ConvolverNode()CountQueuingStrategy: ƒ CountQueuingStrategy()Crypto: ƒ Crypto()CryptoKey: ƒ CryptoKey()CustomElementRegistry: ƒ CustomElementRegistry()CustomEvent: ƒ CustomEvent()DOMError: ƒ DOMError()DOMException: ƒ DOMException()DOMImplementation: ƒ DOMImplementation()DOMMatrix: ƒ DOMMatrix()DOMMatrixReadOnly: ƒ DOMMatrixReadOnly()DOMParser: ƒ DOMParser()DOMPoint: ƒ DOMPoint()DOMPointReadOnly: ƒ DOMPointReadOnly()DOMQuad: ƒ DOMQuad()DOMRect: ƒ DOMRect()DOMRectList: ƒ DOMRectList()DOMRectReadOnly: ƒ DOMRectReadOnly()DOMStringList: ƒ DOMStringList()DOMStringMap: ƒ DOMStringMap()DOMTokenList: ƒ DOMTokenList()DataTransfer: ƒ DataTransfer()DataTransferItem: ƒ DataTransferItem()DataTransferItemList: ƒ DataTransferItemList()DataView: ƒ DataView()Date: ƒ Date()DelayNode: ƒ DelayNode()Document: ƒ Document()DocumentFragment: ƒ DocumentFragment()DocumentType: ƒ DocumentType()DragEvent: ƒ DragEvent()DynamicsCompressorNode: ƒ DynamicsCompressorNode()Element: ƒ Element()ElementInternals: ƒ ElementInternals()EnterPictureInPictureEvent: ƒ EnterPictureInPictureEvent()Error: ƒ Error()ErrorEvent: ƒ ErrorEvent()EvalError: ƒ EvalError()Event: ƒ Event()EventSource: ƒ EventSource()EventTarget: ƒ EventTarget()External: ƒ External()File: ƒ File()FileList: ƒ FileList()FileReader: ƒ FileReader()Float32Array: ƒ Float32Array()Float64Array: ƒ Float64Array()FocusEvent: ƒ FocusEvent()FontFace: ƒ FontFace()FontFaceSetLoadEvent: ƒ FontFaceSetLoadEvent()FormData: ƒ FormData()FormDataEvent: ƒ FormDataEvent()Function: ƒ Function()GainNode: ƒ GainNode()Gamepad: ƒ Gamepad()GamepadButton: ƒ GamepadButton()GamepadEvent: ƒ GamepadEvent()GamepadHapticActuator: ƒ GamepadHapticActuator()HTMLAllCollection: ƒ HTMLAllCollection()HTMLAnchorElement: ƒ HTMLAnchorElement()HTMLAreaElement: ƒ HTMLAreaElement()HTMLAudioElement: ƒ HTMLAudioElement()HTMLBRElement: ƒ HTMLBRElement()HTMLBaseElement: ƒ HTMLBaseElement()HTMLBodyElement: ƒ HTMLBodyElement()HTMLButtonElement: ƒ HTMLButtonElement()HTMLCanvasElement: ƒ HTMLCanvasElement()HTMLCollection: ƒ HTMLCollection()HTMLContentElement: ƒ HTMLContentElement()HTMLDListElement: ƒ HTMLDListElement()HTMLDataElement: ƒ HTMLDataElement()HTMLDataListElement: ƒ HTMLDataListElement()HTMLDetailsElement: ƒ HTMLDetailsElement()HTMLDialogElement: ƒ HTMLDialogElement()HTMLDirectoryElement: ƒ HTMLDirectoryElement()HTMLDivElement: ƒ HTMLDivElement()HTMLDocument: ƒ HTMLDocument()HTMLElement: ƒ HTMLElement()HTMLEmbedElement: ƒ HTMLEmbedElement()HTMLFieldSetElement: ƒ HTMLFieldSetElement()HTMLFontElement: ƒ HTMLFontElement()HTMLFormControlsCollection: ƒ HTMLFormControlsCollection()HTMLFormElement: ƒ HTMLFormElement()HTMLFrameElement: ƒ HTMLFrameElement()HTMLFrameSetElement: ƒ HTMLFrameSetElement()HTMLHRElement: ƒ HTMLHRElement()HTMLHeadElement: ƒ HTMLHeadElement()HTMLHeadingElement: ƒ HTMLHeadingElement()HTMLHtmlElement: ƒ HTMLHtmlElement()HTMLIFrameElement: ƒ HTMLIFrameElement()HTMLImageElement: ƒ HTMLImageElement()HTMLInputElement: ƒ HTMLInputElement()HTMLLIElement: ƒ HTMLLIElement()HTMLLabelElement: ƒ HTMLLabelElement()HTMLLegendElement: ƒ HTMLLegendElement()HTMLLinkElement: ƒ HTMLLinkElement()HTMLMapElement: ƒ HTMLMapElement()HTMLMarqueeElement: ƒ HTMLMarqueeElement()HTMLMediaElement: ƒ HTMLMediaElement()HTMLMenuElement: ƒ HTMLMenuElement()HTMLMetaElement: ƒ HTMLMetaElement()HTMLMeterElement: ƒ HTMLMeterElement()HTMLModElement: ƒ HTMLModElement()HTMLOListElement: ƒ HTMLOListElement()HTMLObjectElement: ƒ HTMLObjectElement()HTMLOptGroupElement: ƒ HTMLOptGroupElement()HTMLOptionElement: ƒ HTMLOptionElement()HTMLOptionsCollection: ƒ HTMLOptionsCollection()HTMLOutputElement: ƒ HTMLOutputElement()HTMLParagraphElement: ƒ HTMLParagraphElement()HTMLParamElement: ƒ HTMLParamElement()HTMLPictureElement: ƒ HTMLPictureElement()HTMLPreElement: ƒ HTMLPreElement()HTMLProgressElement: ƒ HTMLProgressElement()HTMLQuoteElement: ƒ HTMLQuoteElement()HTMLScriptElement: ƒ HTMLScriptElement()HTMLSelectElement: ƒ HTMLSelectElement()HTMLShadowElement: ƒ HTMLShadowElement()HTMLSlotElement: ƒ HTMLSlotElement()HTMLSourceElement: ƒ HTMLSourceElement()HTMLSpanElement: ƒ HTMLSpanElement()HTMLStyleElement: ƒ HTMLStyleElement()HTMLTableCaptionElement: ƒ HTMLTableCaptionElement()HTMLTableCellElement: ƒ HTMLTableCellElement()HTMLTableColElement: ƒ HTMLTableColElement()HTMLTableElement: ƒ HTMLTableElement()HTMLTableRowElement: ƒ HTMLTableRowElement()HTMLTableSectionElement: ƒ HTMLTableSectionElement()HTMLTemplateElement: ƒ HTMLTemplateElement()HTMLTextAreaElement: ƒ HTMLTextAreaElement()HTMLTimeElement: ƒ HTMLTimeElement()HTMLTitleElement: ƒ HTMLTitleElement()HTMLTrackElement: ƒ HTMLTrackElement()HTMLUListElement: ƒ HTMLUListElement()HTMLUnknownElement: ƒ HTMLUnknownElement()HTMLVideoElement: ƒ HTMLVideoElement()HashChangeEvent: ƒ HashChangeEvent()Headers: ƒ Headers()History: ƒ History()IDBCursor: ƒ IDBCursor()IDBCursorWithValue: ƒ IDBCursorWithValue()IDBDatabase: ƒ IDBDatabase()IDBFactory: ƒ IDBFactory()IDBIndex: ƒ IDBIndex()IDBKeyRange: ƒ IDBKeyRange()IDBObjectStore: ƒ IDBObjectStore()IDBOpenDBRequest: ƒ IDBOpenDBRequest()IDBRequest: ƒ IDBRequest()IDBTransaction: ƒ IDBTransaction()IDBVersionChangeEvent: ƒ IDBVersionChangeEvent()IIRFilterNode: ƒ IIRFilterNode()IdleDeadline: ƒ IdleDeadline()Image: ƒ Image()ImageBitmap: ƒ ImageBitmap()ImageBitmapRenderingContext: ƒ ImageBitmapRenderingContext()ImageCapture: ƒ ImageCapture()ImageData: ƒ ImageData()InputDeviceCapabilities: ƒ InputDeviceCapabilities()InputDeviceInfo: ƒ InputDeviceInfo()InputEvent: ƒ InputEvent()Int8Array: ƒ Int8Array()Int16Array: ƒ Int16Array()Int32Array: ƒ Int32Array()IntersectionObserver: ƒ IntersectionObserver()IntersectionObserverEntry: ƒ IntersectionObserverEntry()Intl: {getCanonicalLocales: ƒ, DateTimeFormat: ƒ, NumberFormat: ƒ, Collator: ƒ, v8BreakIterator: ƒ, …}JSON: JSON {Symbol(Symbol.toStringTag): "JSON", parse: ƒ, stringify: ƒ}KeyboardEvent: ƒ KeyboardEvent()KeyframeEffect: ƒ KeyframeEffect()LargestContentfulPaint: ƒ LargestContentfulPaint()LayoutShift: ƒ LayoutShift()Location: ƒ Location()Map: ƒ Map()Math: Math {abs: ƒ, acos: ƒ, acosh: ƒ, asin: ƒ, asinh: ƒ, …}MediaCapabilities: ƒ MediaCapabilities()MediaElementAudioSourceNode: ƒ MediaElementAudioSourceNode()MediaEncryptedEvent: ƒ MediaEncryptedEvent()MediaError: ƒ MediaError()MediaList: ƒ MediaList()MediaMetadata: ƒ MediaMetadata()MediaQueryList: ƒ MediaQueryList()MediaQueryListEvent: ƒ MediaQueryListEvent()MediaRecorder: ƒ MediaRecorder()MediaSession: ƒ MediaSession()MediaSettingsRange: ƒ MediaSettingsRange()MediaSource: ƒ MediaSource()MediaStream: ƒ MediaStream()MediaStreamAudioDestinationNode: ƒ MediaStreamAudioDestinationNode()MediaStreamAudioSourceNode: ƒ MediaStreamAudioSourceNode()MediaStreamEvent: ƒ MediaStreamEvent()MediaStreamTrack: ƒ MediaStreamTrack()MediaStreamTrackEvent: ƒ MediaStreamTrackEvent()MessageChannel: ƒ MessageChannel()MessageEvent: ƒ MessageEvent()MessagePort: ƒ MessagePort()MimeType: ƒ MimeType()MimeTypeArray: ƒ MimeTypeArray()MouseEvent: ƒ MouseEvent()MutationEvent: ƒ MutationEvent()MutationObserver: ƒ MutationObserver()MutationRecord: ƒ MutationRecord()NaN: NaNNamedNodeMap: ƒ NamedNodeMap()Navigator: ƒ Navigator()NetworkInformation: ƒ NetworkInformation()Node: ƒ Node()NodeFilter: ƒ NodeFilter()NodeIterator: ƒ NodeIterator()NodeList: ƒ NodeList()Notification: ƒ Notification()Number: ƒ Number()Object: ƒ Object()OfflineAudioCompletionEvent: ƒ OfflineAudioCompletionEvent()OfflineAudioContext: ƒ OfflineAudioContext()OffscreenCanvas: ƒ OffscreenCanvas()OffscreenCanvasRenderingContext2D: ƒ OffscreenCanvasRenderingContext2D()Option: ƒ Option()OscillatorNode: ƒ OscillatorNode()OverconstrainedError: ƒ OverconstrainedError()PageTransitionEvent: ƒ PageTransitionEvent()PannerNode: ƒ PannerNode()Path2D: ƒ Path2D()PaymentInstruments: ƒ PaymentInstruments()PaymentManager: ƒ PaymentManager()PaymentRequestUpdateEvent: ƒ PaymentRequestUpdateEvent()Performance: ƒ Performance()PerformanceElementTiming: ƒ PerformanceElementTiming()PerformanceEntry: ƒ PerformanceEntry()PerformanceEventTiming: ƒ PerformanceEventTiming()PerformanceLongTaskTiming: ƒ PerformanceLongTaskTiming()PerformanceMark: ƒ PerformanceMark()PerformanceMeasure: ƒ PerformanceMeasure()PerformanceNavigation: ƒ PerformanceNavigation()PerformanceNavigationTiming: ƒ PerformanceNavigationTiming()PerformanceObserver: ƒ PerformanceObserver()PerformanceObserverEntryList: ƒ PerformanceObserverEntryList()PerformancePaintTiming: ƒ PerformancePaintTiming()PerformanceResourceTiming: ƒ PerformanceResourceTiming()PerformanceServerTiming: ƒ PerformanceServerTiming()PerformanceTiming: ƒ PerformanceTiming()PeriodicWave: ƒ PeriodicWave()PermissionStatus: ƒ PermissionStatus()Permissions: ƒ Permissions()PhotoCapabilities: ƒ PhotoCapabilities()PictureInPictureWindow: ƒ PictureInPictureWindow()Plugin: ƒ Plugin()PluginArray: ƒ PluginArray()PointerEvent: ƒ PointerEvent()PopStateEvent: ƒ PopStateEvent()ProcessingInstruction: ƒ ProcessingInstruction()ProgressEvent: ƒ ProgressEvent()Promise: ƒ Promise()PromiseRejectionEvent: ƒ PromiseRejectionEvent()Proxy: ƒ Proxy()PushManager: ƒ PushManager()PushSubscription: ƒ PushSubscription()PushSubscriptionOptions: ƒ PushSubscriptionOptions()RTCCertificate: ƒ RTCCertificate()RTCDTMFSender: ƒ RTCDTMFSender()RTCDTMFToneChangeEvent: ƒ RTCDTMFToneChangeEvent()RTCDataChannel: ƒ RTCDataChannel()RTCDataChannelEvent: ƒ RTCDataChannelEvent()RTCDtlsTransport: ƒ RTCDtlsTransport()RTCError: ƒ RTCError()RTCErrorEvent: ƒ RTCErrorEvent()RTCIceCandidate: ƒ RTCIceCandidate()RTCPeerConnection: ƒ RTCPeerConnection()RTCPeerConnectionIceErrorEvent: ƒ RTCPeerConnectionIceErrorEvent()RTCPeerConnectionIceEvent: ƒ RTCPeerConnectionIceEvent()RTCRtpReceiver: ƒ RTCRtpReceiver()RTCRtpSender: ƒ RTCRtpSender()RTCRtpTransceiver: ƒ RTCRtpTransceiver()RTCSctpTransport: ƒ RTCSctpTransport()RTCSessionDescription: ƒ RTCSessionDescription()RTCStatsReport: ƒ RTCStatsReport()RTCTrackEvent: ƒ RTCTrackEvent()RadioNodeList: ƒ RadioNodeList()Range: ƒ Range()RangeError: ƒ RangeError()ReadableStream: ƒ ReadableStream()ReadableStreamDefaultReader: ƒ ReadableStreamDefaultReader()ReferenceError: ƒ ReferenceError()Reflect: {defineProperty: ƒ, deleteProperty: ƒ, apply: ƒ, construct: ƒ, get: ƒ, …}RegExp: ƒ RegExp()RemotePlayback: ƒ RemotePlayback()ReportingObserver: ƒ ReportingObserver()Request: ƒ Request()ResizeObserver: ƒ ResizeObserver()ResizeObserverEntry: ƒ ResizeObserverEntry()Response: ƒ Response()SVGAElement: ƒ SVGAElement()SVGAngle: ƒ SVGAngle()SVGAnimateElement: ƒ SVGAnimateElement()SVGAnimateMotionElement: ƒ SVGAnimateMotionElement()SVGAnimateTransformElement: ƒ SVGAnimateTransformElement()SVGAnimatedAngle: ƒ SVGAnimatedAngle()SVGAnimatedBoolean: ƒ SVGAnimatedBoolean()SVGAnimatedEnumeration: ƒ SVGAnimatedEnumeration()SVGAnimatedInteger: ƒ SVGAnimatedInteger()SVGAnimatedLength: ƒ SVGAnimatedLength()SVGAnimatedLengthList: ƒ SVGAnimatedLengthList()SVGAnimatedNumber: ƒ SVGAnimatedNumber()SVGAnimatedNumberList: ƒ SVGAnimatedNumberList()SVGAnimatedPreserveAspectRatio: ƒ SVGAnimatedPreserveAspectRatio()SVGAnimatedRect: ƒ SVGAnimatedRect()SVGAnimatedString: ƒ SVGAnimatedString()SVGAnimatedTransformList: ƒ SVGAnimatedTransformList()SVGAnimationElement: ƒ SVGAnimationElement()SVGCircleElement: ƒ SVGCircleElement()SVGClipPathElement: ƒ SVGClipPathElement()SVGComponentTransferFunctionElement: ƒ SVGComponentTransferFunctionElement()SVGDefsElement: ƒ SVGDefsElement()SVGDescElement: ƒ SVGDescElement()SVGDiscardElement: ƒ SVGDiscardElement()SVGElement: ƒ SVGElement()SVGEllipseElement: ƒ SVGEllipseElement()SVGFEBlendElement: ƒ SVGFEBlendElement()SVGFEColorMatrixElement: ƒ SVGFEColorMatrixElement()SVGFEComponentTransferElement: ƒ SVGFEComponentTransferElement()SVGFECompositeElement: ƒ SVGFECompositeElement()SVGFEConvolveMatrixElement: ƒ SVGFEConvolveMatrixElement()SVGFEDiffuseLightingElement: ƒ SVGFEDiffuseLightingElement()SVGFEDisplacementMapElement: ƒ SVGFEDisplacementMapElement()SVGFEDistantLightElement: ƒ SVGFEDistantLightElement()SVGFEDropShadowElement: ƒ SVGFEDropShadowElement()SVGFEFloodElement: ƒ SVGFEFloodElement()SVGFEFuncAElement: ƒ SVGFEFuncAElement()SVGFEFuncBElement: ƒ SVGFEFuncBElement()SVGFEFuncGElement: ƒ SVGFEFuncGElement()SVGFEFuncRElement: ƒ SVGFEFuncRElement()SVGFEGaussianBlurElement: ƒ SVGFEGaussianBlurElement()SVGFEImageElement: ƒ SVGFEImageElement()SVGFEMergeElement: ƒ SVGFEMergeElement()SVGFEMergeNodeElement: ƒ SVGFEMergeNodeElement()SVGFEMorphologyElement: ƒ SVGFEMorphologyElement()SVGFEOffsetElement: ƒ SVGFEOffsetElement()SVGFEPointLightElement: ƒ SVGFEPointLightElement()SVGFESpecularLightingElement: ƒ SVGFESpecularLightingElement()SVGFESpotLightElement: ƒ SVGFESpotLightElement()SVGFETileElement: ƒ SVGFETileElement()SVGFETurbulenceElement: ƒ SVGFETurbulenceElement()SVGFilterElement: ƒ SVGFilterElement()SVGForeignObjectElement: ƒ SVGForeignObjectElement()SVGGElement: ƒ SVGGElement()SVGGeometryElement: ƒ SVGGeometryElement()SVGGradientElement: ƒ SVGGradientElement()SVGGraphicsElement: ƒ SVGGraphicsElement()SVGImageElement: ƒ SVGImageElement()SVGLength: ƒ SVGLength()SVGLengthList: ƒ SVGLengthList()SVGLineElement: ƒ SVGLineElement()SVGLinearGradientElement: ƒ SVGLinearGradientElement()SVGMPathElement: ƒ SVGMPathElement()SVGMarkerElement: ƒ SVGMarkerElement()SVGMaskElement: ƒ SVGMaskElement()SVGMatrix: ƒ SVGMatrix()SVGMetadataElement: ƒ SVGMetadataElement()SVGNumber: ƒ SVGNumber()SVGNumberList: ƒ SVGNumberList()SVGPathElement: ƒ SVGPathElement()SVGPatternElement: ƒ SVGPatternElement()SVGPoint: ƒ SVGPoint()SVGPointList: ƒ SVGPointList()SVGPolygonElement: ƒ SVGPolygonElement()SVGPolylineElement: ƒ SVGPolylineElement()SVGPreserveAspectRatio: ƒ SVGPreserveAspectRatio()SVGRadialGradientElement: ƒ SVGRadialGradientElement()SVGRect: ƒ SVGRect()SVGRectElement: ƒ SVGRectElement()SVGSVGElement: ƒ SVGSVGElement()SVGScriptElement: ƒ SVGScriptElement()SVGSetElement: ƒ SVGSetElement()SVGStopElement: ƒ SVGStopElement()SVGStringList: ƒ SVGStringList()SVGStyleElement: ƒ SVGStyleElement()SVGSwitchElement: ƒ SVGSwitchElement()SVGSymbolElement: ƒ SVGSymbolElement()SVGTSpanElement: ƒ SVGTSpanElement()SVGTextContentElement: ƒ SVGTextContentElement()SVGTextElement: ƒ SVGTextElement()SVGTextPathElement: ƒ SVGTextPathElement()SVGTextPositioningElement: ƒ SVGTextPositioningElement()SVGTitleElement: ƒ SVGTitleElement()SVGTransform: ƒ SVGTransform()SVGTransformList: ƒ SVGTransformList()SVGUnitTypes: ƒ SVGUnitTypes()SVGUseElement: ƒ SVGUseElement()SVGViewElement: ƒ SVGViewElement()Screen: ƒ Screen()ScreenOrientation: ƒ ScreenOrientation()ScriptProcessorNode: ƒ ScriptProcessorNode()SecurityPolicyViolationEvent: ƒ SecurityPolicyViolationEvent()Selection: ƒ Selection()Set: ƒ Set()ShadowRoot: ƒ ShadowRoot()SharedArrayBuffer: ƒ SharedArrayBuffer()SharedWorker: ƒ SharedWorker()SourceBuffer: ƒ SourceBuffer()SourceBufferList: ƒ SourceBufferList()SpeechSynthesisErrorEvent: ƒ SpeechSynthesisErrorEvent()SpeechSynthesisEvent: ƒ SpeechSynthesisEvent()SpeechSynthesisUtterance: ƒ SpeechSynthesisUtterance()StaticRange: ƒ StaticRange()StereoPannerNode: ƒ StereoPannerNode()Storage: ƒ Storage()StorageEvent: ƒ StorageEvent()String: ƒ String()StylePropertyMap: ƒ StylePropertyMap()StylePropertyMapReadOnly: ƒ StylePropertyMapReadOnly()StyleSheet: ƒ StyleSheet()StyleSheetList: ƒ StyleSheetList()SubtleCrypto: ƒ SubtleCrypto()Symbol: ƒ Symbol()SyncManager: ƒ SyncManager()SyntaxError: ƒ SyntaxError()TaskAttributionTiming: ƒ TaskAttributionTiming()Text: ƒ Text()TextDecoder: ƒ TextDecoder()TextDecoderStream: ƒ TextDecoderStream()TextEncoder: ƒ TextEncoder()TextEncoderStream: ƒ TextEncoderStream()TextEvent: ƒ TextEvent()TextMetrics: ƒ TextMetrics()TextTrack: ƒ TextTrack()TextTrackCue: ƒ TextTrackCue()TextTrackCueList: ƒ TextTrackCueList()TextTrackList: ƒ TextTrackList()TimeRanges: ƒ TimeRanges()Touch: ƒ Touch()TouchEvent: ƒ TouchEvent()TouchList: ƒ TouchList()TrackEvent: ƒ TrackEvent()TransformStream: ƒ TransformStream()TransitionEvent: ƒ TransitionEvent()TreeWalker: ƒ TreeWalker()TypeError: ƒ TypeError()UIEvent: ƒ UIEvent()URIError: ƒ URIError()URL: ƒ URL()URLSearchParams: ƒ URLSearchParams()Uint8Array: ƒ Uint8Array()Uint8ClampedArray: ƒ Uint8ClampedArray()Uint16Array: ƒ Uint16Array()Uint32Array: ƒ Uint32Array()UserActivation: ƒ UserActivation()VTTCue: ƒ VTTCue()ValidityState: ƒ ValidityState()VisualViewport: ƒ VisualViewport()WaveShaperNode: ƒ WaveShaperNode()WeakMap: ƒ WeakMap()WeakSet: ƒ WeakSet()WebAssembly: WebAssembly {compile: ƒ, validate: ƒ, instantiate: ƒ, compileStreaming: ƒ, instantiateStreaming: ƒ, …}WebGL2RenderingContext: ƒ WebGL2RenderingContext()WebGLActiveInfo: ƒ WebGLActiveInfo()WebGLBuffer: ƒ WebGLBuffer()WebGLContextEvent: ƒ WebGLContextEvent()WebGLFramebuffer: ƒ WebGLFramebuffer()WebGLProgram: ƒ WebGLProgram()WebGLQuery: ƒ WebGLQuery()WebGLRenderbuffer: ƒ WebGLRenderbuffer()WebGLRenderingContext: ƒ WebGLRenderingContext()WebGLSampler: ƒ WebGLSampler()WebGLShader: ƒ WebGLShader()WebGLShaderPrecisionFormat: ƒ WebGLShaderPrecisionFormat()WebGLSync: ƒ WebGLSync()WebGLTexture: ƒ WebGLTexture()WebGLTransformFeedback: ƒ WebGLTransformFeedback()WebGLUniformLocation: ƒ WebGLUniformLocation()WebGLVertexArrayObject: ƒ WebGLVertexArrayObject()WebKitCSSMatrix: ƒ DOMMatrix()WebKitMutationObserver: ƒ MutationObserver()WebSocket: ƒ WebSocket()WheelEvent: ƒ WheelEvent()Window: ƒ Window()Worker: ƒ Worker()WritableStream: ƒ WritableStream()WritableStreamDefaultWriter: ƒ WritableStreamDefaultWriter()XMLDocument: ƒ XMLDocument()XMLHttpRequest: ƒ XMLHttpRequest()XMLHttpRequestEventTarget: ƒ XMLHttpRequestEventTarget()XMLHttpRequestUpload: ƒ XMLHttpRequestUpload()XMLSerializer: ƒ XMLSerializer()XPathEvaluator: ƒ XPathEvaluator()XPathExpression: ƒ XPathExpression()XPathResult: ƒ XPathResult()XSLTProcessor: ƒ XSLTProcessor()console: console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}decodeURI: ƒ decodeURI()decodeURIComponent: ƒ decodeURIComponent()encodeURI: ƒ encodeURI()encodeURIComponent: ƒ encodeURIComponent()escape: ƒ escape()eval: ƒ eval()event: undefinedglobalThis: Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}isFinite: ƒ isFinite()isNaN: ƒ isNaN()offscreenBuffering: trueparseFloat: ƒ parseFloat()parseInt: ƒ parseInt()undefined: undefinedunescape: ƒ unescape()webkitMediaStream: ƒ MediaStream()webkitRTCPeerConnection: ƒ RTCPeerConnection()webkitSpeechGrammar: ƒ SpeechGrammar()webkitSpeechGrammarList: ƒ SpeechGrammarList()webkitSpeechRecognition: ƒ SpeechRecognition()webkitSpeechRecognitionError: ƒ SpeechRecognitionErrorEvent()webkitSpeechRecognitionEvent: ƒ SpeechRecognitionEvent()webkitURL: ƒ URL()get localStorage: ƒ localStorage()get sessionStorage: ƒ sessionStorage()__proto__: Window
+alert('This is an alert Box');
+undefined
+window.alert('This is an alert Box');
+undefined
+var b = 10;
+undefined
+window.b;
+10
+window instanceof Window;
+true
+Window;
+ƒ Window() { [native code] }
+Window instanceof Object;
+true
+Window instanceof Function;
+true
+let x = 10;
+undefined
+window.x;
+undefined
+window.open();
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+window.open('www.youtube.com');
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+window.open('www.facebook.com');
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+window.open('https://www.facebook.com');
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+window.open('https://www.youtube.com');
+Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+var youtube = window.open('https://www.youtube.com');
+undefined
+youtube.close();
+undefined
+var about = window.open();
+undefined
+about.close();
+undefined
+function init(){
+	console.log(x);
+	console.log(a);
+
+	var x = 10;
+	let a = 15;
+}
+init();
+VM4828:2 undefined
+VM4828:3 Uncaught ReferenceError: Cannot access 'a' before initialization
+    at init (<anonymous>:3:14)
+    at <anonymous>:8:1
+init @ VM4828:3
+(anonymous) @ VM4828:8
+const a = 123;
+undefined
+a = 123;
+VM5074:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM5074:1
+const str = 'brain';
+undefined
+str+' mentor'
+"brain mentor"
+str = str+' mentor'
+VM5175:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5175:1
+str.concat(' mentor')
+"brain mentor"
+str
+"brain"
+str = str.concat(' mentor')
+VM5278:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5278:1
+const arr = [12,23,13,45,71,1,191];
+undefined
+arr.push(100);
+8
+arr
+(8) [12, 23, 13, 45, 71, 1, 191, 100]
+arr.pop();
+100
+const obj = {
+	name:'Vikrant',
+	age:23
+}
+undefined
+obj = 6;
+VM5754:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5754:1
+obj.id = 101;
+101
+function Closure(){
+	var a = 10;
+	function show(){
+		console.log(a);
+	}
+	function display(){
+		console.log(a);
+	}
+	retur{show,display};
+}
+VM6355:9 Uncaught SyntaxError: Unexpected token '{'
+function Closure(){
+	var a = 10;
+	function show(){
+		console.log(a);
+	}
+	function display(){
+		console.log(a);
+	}
+	return {show,display};
+}
+undefined
+Closure();
+{show: ƒ, display: ƒ}
+temp = Closure();
+temp.show();
+VM6374:4 10
+undefined
+temp.display();
+VM6374:7 10
+undefined
+function arg(){
+	console.log('This is an Argument Function');
+}
+
+function calling(fn){
+	console.log('Calling the function of argument');
+	fn();
+}
+calling(arg);
+VM7300:6 Calling the function of argument
+VM7300:2 This is an Argument Function
+undefined
+function Closure(a,b){
+
+	function show(){
+		console.log(a,b);
+	}
+	function display(){
+		console.log(a,b);
+	}
+	return {show,display};
+}
+undefined
+var temp = Closure(23,41);
+undefined
+temp.show();
+VM7395:4 23 41
+undefined
+Calc
+ƒ Calc(){
+	console.log('definition started');
+	function addition(a,b){
+		return a+b;
+	}
+	function subtraction(a,b){
+		return a-b;
+	}
+	console.log('definition ended');
+	return {addition,subtraction};
+}
+Calc = 23;
+23
+Calc;
+23
+var i = 0;
+function count(){
+	console.log(i);
+	i++;
+}
+undefined
+count();
+VM7881:3 0
+undefined
+count();
+VM7881:3 1
+undefined
+count();
+VM7881:3 2
+undefined
+count();
+VM7881:3 3
+undefined
+count();
+VM7881:3 4
+undefined
+count();
+VM7881:3 5
+undefined
+i=-1000;
+-1000
+count();
+VM7881:3 -1000
+undefined
+count();
+VM7881:3 -999
+undefined
+count = 10;
+10
+function topCount(){
+	var i = 1;
+	function increment(){
+		console.log('Count ',i);
+	}
+	return increment;
+}
+undefined
+var count = topCount();
+undefined
+count;
+ƒ increment(){
+		console.log('Count ',i);
+	}
+count();
+VM8247:4 Count  1
+undefined
+count();
+VM8247:4 Count  1
+undefined
+function topCount(){
+	var i = 1;
+	function increment(){
+		console.log('Count ',i);
+		i++;
+	}
+	return increment;
+}
+undefined
+var count = topCount();
+undefined
+count();
+VM8549:4 Count  1
+undefined
+count();
+VM8549:4 Count  2
+undefined
+count();
+VM8549:4 Count  3
+undefined
+count();
+VM8549:4 Count  4
+undefined
+count();
+VM8549:4 Count  5
+undefined
+count();
+VM8549:4 Count  6
+undefined
+topCount = 12;
+12
+count();
+VM8549:4 Count  7
+undefined
+count();
+VM8549:4 Count  8
+undefined
+count();
+VM8549:4 Count  9
+undefined
+count();
+VM8549:4 Count  10
+undefined
+//IIFE(Immediate Invoke Function Expression)
+(
+	function (){
+		console.log('This is an IIFE');
+	}
+)();
+VM8979:4 This is an IIFE
+undefined
+//IIFE(Immediate Invoke Function Expression)
+(
+	function (arg){
+		console.log('This is an IIFE ',arg);
+	}
+)(34);
+VM9109:4 This is an IIFE  34
+undefined
+function AnotherCall(fn){
+	fn();
+}
+AnotherCall(function(){console.log('Function Args')});
+VM9401:4 Function Args
+undefined
+function AnotherCall(fn){
+	fn();
+}
+AnotherCall( ()=>console.log('Arrow Function as Argument') );
+VM9537:4 Arrow Function as Argument
+undefined
+arr
+(7) [12, 23, 13, 45, 71, 1, 191]
+for(var item of arr){
+	console.log(item);
+}
+VM9662:2 12
+VM9662:2 23
+VM9662:2 13
+VM9662:2 45
+VM9662:2 71
+VM9662:2 1
+VM9662:2 191
+undefined
+for(let item of arr){
+	console.log(item);
+}
+VM9711:2 12
+VM9711:2 23
+VM9711:2 13
+VM9711:2 45
+VM9711:2 71
+VM9711:2 1
+VM9711:2 191
+undefined
+arr.forEach(function(element){
+	console.log(element);
+});
+VM9989:2 12
+VM9989:2 23
+VM9989:2 13
+VM9989:2 45
+VM9989:2 71
+VM9989:2 1
+VM9989:2 191
+undefined
+arr.forEach((ele)=>console.log(ele));
+VM10273:1 12
+VM10273:1 23
+VM10273:1 13
+VM10273:1 45
+VM10273:1 71
+VM10273:1 1
+VM10273:1 191
+undefined
+arr.forEach( ele =>console.log(ele));
+VM10331:1 12
+VM10331:1 23
+VM10331:1 13
+VM10331:1 45
+VM10331:1 71
+VM10331:1 1
+VM10331:1 191
+undefined
+arr.find((item)=> item=='-12');
+undefined
+arr.find((item)=> item=='45');
+45
+arr.find((item)=> item=='191');
+191
+arr.find((item)=>{
+	return item == '45';
+});
+45
+arr.find((item)=>{
+	return item ;
+});
+12
+arr.find((item)=>{
+	return item != 191 ;
+});
+12
+arr.find((item)=>{
+	item == 191 ;
+});
+undefined
+arr.find((item)=>{
+	return item == 191 ;
+});
+191
+arr.filter((item)=>item);
+(7) [12, 23, 13, 45, 71, 1, 191]
+arr.filter((item)=>item>50);
+(2) [71, 191]
+arr.filter((item)=>item%2 == 0);
+[12]
+arr.filter((item)=>item%2 == 1);
+(6) [23, 13, 45, 71, 1, 191]
+arr.findIndex(item=>item == 4);
+-1
+arr.includes(45);
+true
+arr.map( item => 'xy'+item);
+(7) ["xy12", "xy23", "xy13", "xy45", "xy71", "xy1", "xy191"]
+arr.map( item => item/2);
+(7) [6, 11.5, 6.5, 22.5, 35.5, 0.5, 95.5]
+arr.slice(0);
+(7) [12, 23, 13, 45, 71, 1, 191]
+arr.slice(0,4);
+(4) [12, 23, 13, 45]
+arr.slice(1,4);
+(3) [23, 13, 45]
+arr
+(7) [12, 23, 13, 45, 71, 1, 191]
+arr.splice(3,1,2999);
+[45]0: 45length: 1__proto__: Array(0)
+arr
+(7) [12, 23, 13, 2999, 71, 1, 191]
+arr.splice(3,1);
+[2999]
+arr
+(6) [12, 23, 13, 71, 1, 191]
+temp = arr;
+(6) [12, 23, 13, 71, 1, 191]
+arr = [];
+VM12212:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM12212:1
+temp
+(6) [12, 23, 13, 71, 1, 191]
+temp = [];
+[]
+temp.splice(0);
+[]
+arr.splice(0);
+(6) [12, 23, 13, 71, 1, 191]
+arr
+[]
+arr.push(299)
+1
+arr
+[299]
