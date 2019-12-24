@@ -1,0 +1,52 @@
+1.DataTypes
+
+2.Predefined Methods(parseInt(),toString()).
+
+3.Conditional Statements(if-else,switch-case,ternary operator)
+
+4.Looping Statements(while,do-while,for).
+
+5.Strings and it's methods ( charAt(), substring(), substr(), length,[] )
+
+6.Arrays and it's methods( length,find(),filter(),slice(), splice(), push(), pop(), reverse() ) and for-of loop.
+
+7.Root Functionalities (Root Function, Root Object, Root Array, Root Document, Root Window )
+
+8.Objects 
+    ->creation (Constructor Form)
+    ->Literal Form 
+    ->for-in loop
+    ->Object.prototype.function creation
+
+9.Functions 
+    ->Function Declaration Style
+    ->Function Expression or Anonymous Style
+    ->Arrow Function
+    ->Closure and Scopes
+    ->apply, bind, call
+    
+10.OOPS
+    ->Function Constructor Style
+    ->Class Style with Constructor (inbuild prototype).
+    ->this,lexical this.
+
+11.Spread operator and Rest Parameter.
+
+12.var vs let vs const.
+
+13.DOM( Document Object Model )
+
+14.ASYNC Programming
+    ->SetTimeout
+    ->Event Loop( V8 Engine ) 
+    ->CallBacks and Callback Hell
+    ->Promises and then and catch
+    ->Promises Hell
+    ->Promise.all()
+    ->async await
+    ->fetch() API
+
+
+15.NodeJS
+    
+
