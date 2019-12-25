@@ -1,0 +1,171 @@
+function print(){
+    console.log('Print Function Called......');
+}
+undefined
+setTimeout(print,3000);
+1
+VM358:2 Print Function Called......
+setTimeout(function (){
+    console.log('function called after 3 Sec');
+},3000);
+2
+VM592:2 function called after 3 Sec
+setTimeout(()=>{
+    console.log('function called after 3 Sec');
+},3000);
+3
+VM629:2 function called after 3 Sec
+setTimeout(print,2000);
+setTimeout(print,4000);
+5
+VM358:2 Print Function Called......
+VM358:2 Print Function Called......
+setTimeout(print,2000);
+print();
+VM358:2 Print Function Called......
+undefined
+VM358:2 Print Function Called......
+setTimeout(print,2000);
+setTimeout(()=>console.log('Bottom Function'),0);
+8
+VM1376:2 Bottom Function
+VM358:2 Print Function Called......
+function giveData(num){
+    setTimeout(()=>{
+        if(num%2 == 0)
+            return 'Even Number';
+    },3000);
+
+}
+undefined
+var str =  giveData(4);
+undefined
+console.log(str);
+VM1806:1 undefined
+undefined
+str
+undefined
+function giveData(num,fn){
+    setTimeout(()=>{
+        fn(num);
+    },4000);
+
+}
+undefined
+function printNum(num){
+    console.log('Result is -->  ',num);
+
+}
+undefined
+giveData(29,printNum);
+undefined
+VM2293:2 Result is -->   29
+function printNum(num){
+    console.log('Result is -->  ',num*2);
+
+}
+undefined
+giveData(9,printNum);
+undefined
+VM2683:2 Result is -->   18
+function callback1(num,fn){
+    setTimeout(()=>{
+            fn(num);
+    },4000);
+}
+
+function callback2(num){
+    console.log('Result = ',num*2);
+}
+
+
+undefined
+function giveData(num,fn1,fn2){
+    setTimeout(()=>{
+        fn1(num,fn2);
+    },4000);
+
+}
+undefined
+giveData(9,callback1,callback2);
+undefined
+VM3091:8 Result =  18
+function giveData(num){
+    var promise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        },4000);
+    });
+    
+}
+undefined
+function giveData(num){
+    var promise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(num %2==0)
+                resolve(num*num);
+             
+            if(num<0)
+                reject(404);       
+        },4000);
+    });
+        
+    return promise;
+    
+}
+undefined
+var temp = giveData(4);
+temp.then(result=>console.log(result))
+.catch(err=>console.log(err));
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM4782:2 16
+temp
+Promise {<resolved>: 16}__proto__: Promiseconstructor: ƒ Promise()then: ƒ then()catch: ƒ catch()finally: ƒ finally()Symbol(Symbol.toStringTag): "Promise"__proto__: Object[[PromiseStatus]]: "resolved"[[PromiseValue]]: 16
+var temp = giveData(-4);
+temp.then(result=>console.log(result))
+.catch(err=>console.log(err));
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM4862:2 16
+temp
+Promise {<resolved>: 16}
+function giveData(num){
+    var promise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(num %2==0 && num >0)
+                resolve(num*num);
+             
+            if(num<0)
+                reject(404);       
+        },4000);
+    });
+        
+    return promise;
+    
+}
+undefined
+var temp = giveData(-4);
+temp.then(result=>console.log(result))
+.catch(err=>console.log(err));
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM4971:3 404
+temp
+Promise {<rejected>: 404}__proto__: Promise[[PromiseStatus]]: "rejected"[[PromiseValue]]: 404
+var temp = fetch('https://raw.githubusercontent.com/brainmentorspvtltd/myserverdata/master/mobiles.json');
+
+temp.then(response=>{
+    response.json().then(data=>{
+        console.log('Final Data is ',data);
+    }).catch(err=>{
+        console.log('invalid json ',err);
+    });      
+  
+}).catch(error=>{
+    console.log('error making request to server ',error);
+});
+Promise {<pending>}
+VM5924:5 Final Data is  {mobiles: Array(4)}mobiles: (4) [{…}, {…}, {…}, {…}]0: {id: 1001, name: "Samsung Mobile", price: 30000, url: "http://c2c.sulekhalive.com/lcproducts/mobiles/images/samsung/album/large/samsung-z3(2).jpg"}id: 1001name: "Samsung Mobile"price: 30000url: "http://c2c.sulekhalive.com/lcproducts/mobiles/images/samsung/album/large/samsung-z3(2).jpg"__proto__: Object1: {id: 1002, name: "Apple Mobile", price: 40000, url: "https://4.imimg.com/data4/LY/WP/GLADMIN-8934545/apple-mobiles-500x500.jpg"}2: {id: 1003, name: "Lg Mobile", price: 20000, url: "http://www.lg.com/uk/images/mobile-phones/MD05609550/stylus-350.jpg"}3: {id: 1004, name: "MI Mobile", price: 10000, url: "https://www.91-img.com/pictures/xiaomi-mi-5s-mobile-phone-large-1.jpg"}length: 4__proto__: Array(0)__proto__: Object
+Promise.all([giveData(4),giveData(6),giveData(2)]).then(data=>console.log(data)).catch(err=>console.log(err));
+Promise {<pending>}
+VM6774:1 (3) [16, 36, 4]
+Promise.all([giveData(4),giveData(-6),giveData(2)]).then(data=>console.log(data)).catch(err=>console.log(err));
+Promise {<pending>}
+VM6814:1 404
