@@ -1,0 +1,8 @@
+1. npm init -y(on Command Window)   ->It will create the package.json file which contains the meta information about our project.
+
+2.index.js -> package.json->main:'index.js'
+It tells the developer about the main entry point of your server.
+
+3.Inside Index.js
+->require http module.
+->http.createServer();
