@@ -1,0 +1,7 @@
+Databases -> Collections -> Documents
+
+show dbs
+
+use <dbname>
+
+db.<collectionName>.insertOne({})
